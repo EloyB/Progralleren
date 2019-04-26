@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  height: 100vh;
+  background-image: linear-gradient(white, #ddf2f9 30%);
+}
+
+#wolken {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+}
+
+.navbar {
+  height: 7vh;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.6);
+}
+
+.navbar img{
+    width: 120px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+}
+
+.contact {
+  text-align: center;
+  border: solid #ba0000 2px;
+  height: 30px;
+  width: 120px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 10px;
+}
+
+.contact:hover {
+  background-color: #ba0000;
+}
+
+.contact:hover p {
+  color: #fff;
+}
+
+.contact p {
+  color: #ba0000;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.left,
+.right {
+  width: 50%;
+  height: 93vh;
+  position: relative;
+}
+
+.left img {
+  width: 70%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.explanation {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  box-shadow: 0px 0px 10px -2px rgba(255, 255, 255, 0.6);
+  z-index: 99;
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.right img {
+  width: 60px;
+  margin-top: 450px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 1500ms;
+  z-index: 99;
+}
+
+#staart {
+  width: 5px;
+  height: 30px;
+  background-image: linear-gradient(white, #efefef 80%);
+  z-index: 999;
+  margin: auto;
+  margin-top: -10px;
+  transition: 1500ms;
+  z-index: 999;
+}
+
+.infographic {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translateX(-50%);
+  z-index: 999;
+  transition: 1500ms;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #ba0000;
+  border-radius: 50%;
+  margin: auto;
+  margin: -40px 0;
+  border: solid #fff 5px;
+  box-shadow: -1px 2px 10px -2px rgba(0, 0, 0, 0.75);
+  transition: 1500ms;
+}
+
+.circle p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.infocontent {
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, 0);
+  z-index: 999;
+  transition: 1500ms;
+}
+
+.even,
+.oneven {
+  width: 50%;
+  height: 60px;
+  margin: -40px 0;
+  transition: 1500ms;
+  position: relative;
+}
+
+.oneven {
+  margin-left: 0;
+}
+
+.even {
+  margin-left: 50%;
+}
+
+.pointer {
+  height: 1px;
+  background-color: #000;
+  width: 50px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pointercircle {
+  height: 5px;
+  width: 5px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.oneven .pointer {
+  margin: auto auto auto 60%;
+}
+
+.even .pointer {
+  margin: auto 60% auto auto;
+}
+
+.oneven .pointercircle {
+  right: 0;
+}
+
+.onevencontent {
+  position: absolute;
+  width: 55%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.evencontent {
+  position: absolute;
+  width: 60%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto auto auto 50%;
+}
+
+@media (max-width: 1000px) {
+  #wolken {
+    display: block;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left{
+      display: inline-block;
+  }
+
+  .explanation {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 27px;
+  }
+
+  .right {
+    background-color: #ddf2f9;
+    height: 100vh;
+  }
+
+  .infocontent {
+    width: 100%;
+  }
+
+  .even,
+  .oneven {
+    width: 40%;
+  }
+
+  .oneven {
+    margin-left: 10%;
+  }
+
+  .pointer {
+    width: 20px;
+  }
+
+  .evencontent,
+  .onevencontent {
+    width: 50%;
+  }
+
+  .evencontent p,
+  .onevencontent p {
+    font-size: 12px;
+  }
+
+  .evencontent h4,
+  .onevencontent h4 {
+    font-size: 13px;
+  }
+}
